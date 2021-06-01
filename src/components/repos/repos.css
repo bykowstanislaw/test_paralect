@@ -11,7 +11,7 @@
 
 .repos__block {
     width: 877px;
-    height: 112px;
+    padding-bottom: 24px;
     background-color: white;
     margin-bottom: 24px;
     margin-left: 98px;
@@ -40,6 +40,7 @@
     line-height: 19px;
     font-family: 'Inter', sans-serif;
     margin-left: 32px;
+    padding-right: 10px;
 }
 
 .pagination {

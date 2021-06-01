@@ -1,9 +1,12 @@
-@media (min-width: 1310px) {}
+@media (min-width: 1310px) and (max-width:1550) {
+    
+}
 
 @media (min-width: 992px) and (max-width: 1310px) {
     .repos__empty {
         margin-left: 20px;
     }
+    
 }
 
 @media (min-width: 780px) and (max-width: 991px) {
@@ -16,14 +19,16 @@
     .repos__empty {
         margin-left: 20px
     }
+    
 }
+
 
 @media (min-width: 480px) and (max-width:780px) {
     .repos__block {
         width: 250px;
         padding-bottom: 20px;
         padding-right: 25px;
-        height: 160px;
+        
     }
     .repos__empty {
         margin-left: 200px
@@ -35,7 +40,9 @@
         width: 250px;
         padding-bottom: 20px;
         padding-right: 25px;
+        
     }
+    
     .menu {
         width: 100%;
     }
@@ -44,5 +51,10 @@
     }
     .repos__empty {
         margin-left: 20px
+    }
+    .repos__info{
+        text-align: center;
+        justify-content: center;
+        margin-left: 20px;
     }
 }

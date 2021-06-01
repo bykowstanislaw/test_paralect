@@ -15,13 +15,13 @@ const Result = (props) => {
     const [url, setUrl] = useState('')
     const isFirstRun = useRef(true);
 
-    
+
     const backtoback = () => {
         setLoading(false)
     }
 
 
- 
+
     useEffect(() => {
         const dataFunction = () => {
             if (isFirstRun.current) {
@@ -30,23 +30,26 @@ const Result = (props) => {
             }
             axios.get(`https://api.github.com/users/${props.inputValue}`)
                 .then((data) => {
-    
+
                     setUrl(data.data.html_url)
                     setName(data.data.name)
                     setUsername(data.data.login)
                     setAvatar(data.data.avatar_url)
-                    setFollowers(data.data.followers + ' followers')
-                    setFollowing(data.data.following + ' following')
+                    if (data.data.followers >= 10000) {
+                        setFollowers((data.data.followers / 1000).toFixed(1) + "k")
+                    }
+                    else { setFollowers(data.data.followers) }
+                    setFollowing(data.data.following)
                     setQuantity(data.data.public_repos)
                     setError(false)
                     setLoading(true)
-    
+
                 },
                     (error) => {
                         setError(error)
                     })
-                    
-    
+
+
         }
         dataFunction()
         setTimeout(backtoback, 1000)

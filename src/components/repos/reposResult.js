@@ -33,46 +33,47 @@ const ReposResult = (props) => {
                 setData(data.data.map((el) => {
                     return el
                 }))
-                               
+
             })
     }, [username, targetPage])
 
     useEffect(() => {
         setTargetPage(1)
-        
     }, [username])
 
-    return (<>
-
-        {(reposQuantity) ?
-            <div className='repos'>
-                {(reposQuantity) ? <div className="repos__tittle">Repositories ({reposQuantity})</div> : <></>}
-                {reposData.map((el, i) => {
-                    return (
-                        <div className='repos__block' key={i}>
-                            <div className="block__tittle"><a href={el.html_url} target="_blank" rel="noreferrer" >{el.name}</a></div>
-                            <div className="block__descr">{el.description}</div>
-                        </div>
-                    )
-                })}
-            </div>
-            :
-            <div className='repos__empty'><img src="/images/empty.png" alt="pusto"></img></div>}
-        {(reposQuantity) ?
-            <div className="pag">
-                {targetPage * 4 > reposQuantity ? <div className='pagination__info'>{((targetPage * 4) - 3)}-{reposQuantity} of {reposQuantity} items</div>
-                    : <div className='pagination__info'>{((targetPage * 4) - 3)}-{targetPage * 4} of {reposQuantity} items</div>}
-                <div><Pagination reposQuantity={reposQuantity}
-                    setTargetPage={setTargetPage}
-                    targetPage={targetPage}
-                    prevpage={prevpage}
-                    nextpage={nextpage} /></div>
-            </div>
-            :
-            <div></div>}
+    return (
 
 
-    </>)
+        <div className="app">
+            {(reposQuantity) ?
+                <div className='repos'>
+                    {(reposQuantity) ? <div className="repos__tittle">Repositories ({reposQuantity})</div> : <></>}
+                    {reposData.map((el, i) => {
+                        return (
+                            <div className='repos__block' key={i}>
+                                <div className="block__tittle"><a href={el.html_url} target="_blank" rel="noreferrer" >{el.name}</a></div>
+                                <div className="block__descr">{el.description}</div>
+                            </div>
+                        )
+                    })}
+                </div>
+                :
+                <div className='repos__empty'><img src="/images/empty.png" alt="pusto"></img></div>}
+            {(reposQuantity) ?
+                <div className="pag">
+                    {targetPage * 4 > reposQuantity ? <div className='pagination__info'>{((targetPage * 4) - 3)}-{reposQuantity} of {reposQuantity} items</div>
+                        : <div className='pagination__info'>{((targetPage * 4) - 3)}-{targetPage * 4} of {reposQuantity} items</div>}
+                    <div className="pagin"><Pagination reposQuantity={reposQuantity}
+                        setTargetPage={setTargetPage}
+                        targetPage={targetPage}
+                        prevpage={prevpage}
+                        nextpage={nextpage} /></div>
+                </div>
+                :
+                <div></div>}
+
+
+        </div>)
 }
 
 export default ReposResult

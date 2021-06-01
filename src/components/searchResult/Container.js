@@ -33,12 +33,12 @@ const Container = (props) => {
                             <div className="user__username"><a href={props.url} target="_blank" rel="noreferrer" >{username}</a></div>
                             <div className="user__connections">
                                 <div className="user__followers">
-                                    {(followers) ? <img src="/images/shared.png" alt='followers' className="follower__pic" /> : <></>}
-                                    <div className="pl6">{followers}</div>
+                                    <img src="/images/shared.png" alt='followers' className="follower__pic" />
+                                    <div className="pl6">{followers} followers</div>
                                 </div>
                                 <div className='user__following'>
-                                    {(followers) ? <img src="/images/provate.png" alt='following' /> : <></>}
-                                    <div className="pl6">{following}</div>
+                                    <img src="/images/provate.png" alt='following' />
+                                    <div className="pl6">{following} following</div>
                                 </div>
                             </div>
                         </div>
