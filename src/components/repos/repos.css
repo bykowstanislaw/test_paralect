@@ -1,0 +1,52 @@
+.repos__tittle {
+    margin-left: 98px;
+    margin-top: 28px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 130%;
+    font-family: 'Inter', sans-serif;
+    margin-bottom: 29px;
+}
+
+.repos__block {
+    width: 877px;
+    height: 112px;
+    background-color: white;
+    margin-bottom: 24px;
+    margin-left: 98px;
+}
+
+.block__tittle>a {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29px;
+    font-family: 'Inter', sans-serif;
+    color: #0064EB;
+    text-decoration: none;
+    margin-left: 32px;
+}
+
+.block__tittle {
+    padding-top: 24px;
+    padding-bottom: 16px;
+}
+
+.block__descr {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 19px;
+    font-family: 'Inter', sans-serif;
+    margin-left: 32px;
+}
+
+.pagination {
+    display: flex;
+}
+
+.repos__empty {
+    margin-left: 410px;
+    margin-top: 197px;
+}

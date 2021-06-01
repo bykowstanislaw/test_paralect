@@ -1,0 +1,17 @@
+@media (min-width: 1200px) {}
+
+@media (min-width: 992px) and (max-width: 1199px) {}
+
+@media (min-width: 780px) and (max-width: 991px) {}
+
+@media (max-width: 780px) and (min-width:480px) {
+    .menu__search {
+        width: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    .menu__search {
+        width: 150px;
+    }
+}

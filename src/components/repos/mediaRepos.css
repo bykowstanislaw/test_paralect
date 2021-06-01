@@ -1,0 +1,48 @@
+@media (min-width: 1310px) {}
+
+@media (min-width: 992px) and (max-width: 1310px) {
+    .repos__empty {
+        margin-left: 20px;
+    }
+}
+
+@media (min-width: 780px) and (max-width: 991px) {
+    .pagination {
+        margin-left: 50px;
+    }
+    .pagination__info {
+        margin-left: 150px;
+    }
+    .repos__empty {
+        margin-left: 20px
+    }
+}
+
+@media (min-width: 480px) and (max-width:780px) {
+    .repos__block {
+        width: 250px;
+        padding-bottom: 20px;
+        padding-right: 25px;
+        height: 160px;
+    }
+    .repos__empty {
+        margin-left: 200px
+    }
+}
+
+@media (max-width: 480px) {
+    .repos__block {
+        width: 250px;
+        padding-bottom: 20px;
+        padding-right: 25px;
+    }
+    .menu {
+        width: 100%;
+    }
+    .menu__search {
+        width: 30%;
+    }
+    .repos__empty {
+        margin-left: 20px
+    }
+}
